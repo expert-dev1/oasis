@@ -1,4 +1,3 @@
-
 <ais-instantsearch [config]="{
     apiKey: 'be3cea14adbbe71cf02d833888d191ac',
     appId: 'G0RI7NNWIC',
@@ -7,7 +6,7 @@
   }">
     <div class="row" style="margin-top:15px;">
         <div class="col-md-2">
-           
+
         </div>
         <div class="col-md-8">
             <div class="card bg-light">
@@ -19,7 +18,7 @@
             </div>
         </div>
         <div class="col-md-2">
-           
+
         </div>
     </div>
     <div class="row m-t-20">
@@ -71,17 +70,37 @@
                     </ais-refinement-list>
                 </div>
             </div>
-           
-            
+
+
         </div>
         <div class="col-md-6">
             <ais-hits>
                 <ng-template let-hits="hits">
                     <div *ngFor="let hit of hits">
                         <div class="card">
-                            <img class="card-img-top img-fluid"
-                                style="height: 350px; margin-bottom:25px;box-shadow: 0 5px 12px 0 rgba(0,0,0,0.2),0 5px 12px 0 rgba(0,0,0,0.19) !important;"
-                                src="{{hit.cover}}" />
+                            <ngb-carousel>
+                                <ng-template ngbSlide>
+                                    <img class="card-img-top img-fluid"
+                                    style="height: 350px; margin-bottom:25px;box-shadow: 0 5px 12px 0 rgba(0,0,0,0.2),0 5px 12px 0 rgba(0,0,0,0.19) !important;"
+                                    src="{{hit.cover}}" />
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                    <img class="card-img-top img-fluid"
+                                    style="height: 350px; margin-bottom:25px;box-shadow: 0 5px 12px 0 rgba(0,0,0,0.2),0 5px 12px 0 rgba(0,0,0,0.19) !important;"
+                                    src="{{hit.img2}}" />
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                    <img class="card-img-top img-fluid"
+                                    style="height: 350px; margin-bottom:25px;box-shadow: 0 5px 12px 0 rgba(0,0,0,0.2),0 5px 12px 0 rgba(0,0,0,0.19) !important;"
+                                    src="{{hit.img3}}" />
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                    <img class="card-img-top img-fluid"
+                                    style="height: 350px; margin-bottom:25px;box-shadow: 0 5px 12px 0 rgba(0,0,0,0.2),0 5px 12px 0 rgba(0,0,0,0.19) !important;"
+                                    src="{{hit.img4}}" />
+                                </ng-template>
+                            </ngb-carousel>
+          
                             <div class="listing-body" style="padding:15px;">
                                 <h2 style="color: #6abd46; margin-bottom: 10px;">R{{hit.price | number}}</h2>
                                 <span class="font-weight-bold" style="color: #6abd46;">{{ hit.bedrooms }} Bedroom
@@ -109,9 +128,9 @@
                                                 style="height: 40px; margin-right: 10px" /></div>
 
                                     </div>
-                            
+
                                 </div>
-                               
+
                                 <div [innerHTML]="hit.description"></div>
                                 <div class="card bg-light-info" style="margin-top: 45px;">
                                     <div class="card-body">
@@ -138,11 +157,12 @@
                                 </div>
                                 <div class="card bg-light-info" style="margin-top: 45px;">
                                     <div class="card-body">
-<strong>Agent:</strong> {{ hit.agent }}<br />
-<strong>Partner:</strong> {{ hit.partner }}<br />
-<a href="{{ hit.webLink }}" target="_blank" style="text-decoration: underline;">Web Link</a>
-                                        </div>
-                                        </div>
+                                        <strong>Agent:</strong> {{ hit.agent }}<br />
+                                        <strong>Partner:</strong> {{ hit.partner }}<br />
+                                        <a href="{{ hit.webLink }}" target="_blank"
+                                            style="text-decoration: underline;">Web Link</a>
+                                    </div>
+                                </div>
                                 <!-- The text field -->
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend"><label class="input-group-text"
@@ -185,7 +205,7 @@
                     </ais-range-input>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </ais-instantsearch>
