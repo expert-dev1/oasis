@@ -102,8 +102,8 @@
                                         <div class="m-r-10"><span style="color: #6abd46;">{{ hit.garages }}</span></div>
                                         <div> <img src="../../assets/images/garages-icon.jpg"
                                                 style="height: 40px; margin-right: 10px" /></div>
-                                        <div *ngIf="hit.floor" class="m-r-10"><span
-                                                style="color: #6abd46;">{{ hit.floor | number }}m²</span></div>
+                                        <div *ngIf="hit.floor" class="m-r-10"><span style="color: #6abd46;">{{ hit.floor
+                                                | number }}m²</span></div>
                                         <div *ngIf="hit.floor"> <img src="../../assets/images/floor.png"
                                                 style="height: 40px; margin-right: 10px" /></div>
 
@@ -116,22 +116,125 @@
                                     <div class="card-body">
                                         <h4 style="margin-left: 15px;" style="font-weight: bold;">Property Features</h4>
                                         <table class="table">
-                                            <tr>
+                                            <tr *ngIf='hit.bedrooms'>
+                                                <th> Bedrooms</th>
                                                 <th>{{ hit.bedrooms }} Bedrooms</th>
+                                            </tr>
+                                            <tr *ngIf='hit.flatlet'>
+                                                <th> Flatlet</th>
                                                 <th>{{ hit.flatlet }} Flatlet(s)</th>
                                             </tr>
-                                            <tr>
+
+                                            <tr *ngIf='hit.bathrooms'>
+                                                <th> Bathrooms</th>
                                                 <th>{{ hit.bathrooms }} Bathrooms</th>
+                                            </tr>
+                                            <tr *ngIf='hit.receptionRooms'>
+                                                <th>Reception Rooms</th>
                                                 <th>{{ hit.receptionRooms }} Reception Rooms</th>
                                             </tr>
-                                            <tr>
+
+                                            <tr *ngIf='hit.kitchens'>
+                                                <th>Kitchens</th>
                                                 <th>{{ hit.kitchens }} Kitchens</th>
+                                            </tr>
+                                            <tr *ngIf='hit.domesticRooms'>
+                                                <th>Domestic Rooms</th>
                                                 <th>{{ hit.domesticRooms }} Domestic Rooms</th>
                                             </tr>
-                                            <tr>
+
+                                            <tr *ngIf='hit.garages'>
+                                                <th> Garages</th>
                                                 <th>{{ hit.garages }} Garages</th>
+                                            </tr>
+
+                                            <tr *ngIf='hit.carPorts'>
+                                                <th> Car Ports</th>
                                                 <th>{{ hit.carPorts }} Car Ports</th>
                                             </tr>
+                                            <tr *ngIf='hit.landSize'>
+                                                <th> Land Size</th>
+                                                <th>{{ hit.landSize }} Land Size</th>
+                                            </tr>
+                                            <tr *ngIf='hit.floorSize'>
+                                                <th>Floor Size</th>
+                                                <th>{{ hit.floorSize }} Floor Size</th>
+                                            </tr>
+                                            <tr *ngIf='hit.lounges'>
+                                                <th>Lounges</th>
+                                                <th>{{ hit.lounges }} Lounges</th>
+                                            </tr>
+                                            <tr *ngIf='hit.diningRooms'>
+                                                <th>Dining Rooms</th>
+                                                <th>{{ hit.diningRooms }} Dining Rooms</th>
+                                            </tr>
+                                            <tr *ngIf='hit.studyRooms'>
+                                                <th>Study Rooms</th>
+                                                <th>{{ hit.studyRooms }} Study Rooms</th>
+                                            </tr>
+                                            <tr *ngIf='hit.pool'>
+                                                <th>Pool</th>
+                                                <th>{{ hit.pool }} pool</th>
+                                            </tr>
+                                            <tr *ngIf='hit.furnished'>
+                                                <th>Furnished</th>
+                                                <th>{{ hit.furnished }} Furnished</th>
+                                            </tr>
+
+                                            <tr *ngIf='hit.petsAllowed'>
+                                                <th>Pets Allowed</th>
+                                                <th>{{ hit.petsAllowed }} Pets Allowed</th>
+                                            </tr>
+
+                                            <tr *ngIf='hit.garden'>
+                                                <th>Garden</th>
+                                                <th>{{ hit.garden}} Garden</th>
+                                            </tr>
+                                            <tr *ngIf='hit.address1'>
+                                                <th>Address1</th>
+                                                <th>{{ hit.address1}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.address2'>
+                                                <th>Address2</th>
+                                                <th>{{ hit.address2}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.city'>
+                                                <th>City</th>
+                                                <th>{{ hit.city}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.state'>
+                                                <th>State</th>
+                                                <th>{{ hit.state}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.country'>
+                                                <th>Country</th>
+                                                <th>{{ hit.country}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.zip'>
+                                                <th>Zip</th>
+                                                <th>{{ hit.zip}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.streetNumber'>
+                                                <th>Street Number</th>
+                                                <th>{{ hit.streetNumber}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.streetName'>
+                                                <th>Street Name</th>
+                                                <th>{{ hit.streetName}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.province'>
+                                                <th>Province</th>
+                                                <th>{{ hit.province}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.views'>
+                                                <th>Views</th>
+                                                <th>{{ hit.views}} </th>
+                                            </tr>
+                                            <tr *ngIf='hit.landingPage'>
+                                                <th>Landing Page</th>
+                                                <th>{{ hit.landingPage}} </th>
+                                            </tr>
+                                            
                                         </table>
                                     </div>
                                 </div>
